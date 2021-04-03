@@ -1,9 +1,9 @@
 usage() {
-    echo "Usage: filter-links-from-gopher LINKS_FILE"
+    echo "Usage: filter-links-from-gopher"
 
     exit 1
 }
 
-[[ $# -ne 1 ]] && usage
+[[ $# -ne 0 ]] && usage
 
-cat "links/gopher-links" | awk '/video\//'
+cat "links/gopher-links" | awk '/video\//' > ./links/video-links
